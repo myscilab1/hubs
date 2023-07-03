@@ -1192,10 +1192,10 @@ class UIRoot extends Component {
           },
           (this.props.breakpoint === "sm" || this.props.breakpoint === "md") &&
             (this.props.hub.entry_mode !== "invite" || this.props.hubChannel.can("update_hub")) && {
-              id: "invite",
-              label: <FormattedMessage id="more-menu.invite" defaultMessage="Invite" />,
-              icon: InviteIcon,
-              onClick: () => this.props.scene.emit("action_invite")
+             // id: "invite",
+             // label: <FormattedMessage id="more-menu.invite" defaultMessage="Invite" />,
+             // icon: InviteIcon,
+             // onClick: () => this.props.scene.emit("action_invite")
             },
           this.isFavorited()
             ? {
@@ -1385,17 +1385,6 @@ class UIRoot extends Component {
                     {(!this.props.selectedObject ||
                       (this.props.breakpoint !== "sm" && this.props.breakpoint !== "md")) && (
                       <ContentMenu>
-                        {showObjectList && (
-                          <ObjectsMenuButton
-                            active={this.state.sidebarId === "objects"}
-                            onClick={() => this.toggleSidebar("objects")}
-                          />
-                        )}
-                        <PeopleMenuButton
-                          active={this.state.sidebarId === "people"}
-                          onClick={() => this.toggleSidebar("people")}
-                          presencecount={this.state.presenceCount}
-                        />
                         {showECSObjectsMenuButton && (
                           <ECSDebugMenuButton
                             active={this.state.sidebarId === "ecs-debug"}
@@ -1696,3 +1685,20 @@ UIRootHooksWrapper.propTypes = {
 };
 
 export default UIRootHooksWrapper;
+//sdchange - removed below from line 1388
+/*
+                        {showObjectList && (
+                          <ObjectsMenuButton
+                            active={this.state.sidebarId === "objects"}
+                            onClick={() => this.toggleSidebar("objects")}
+                          />
+                        )}
+*/
+//sdchange - removed below lines from 1395
+/*                        <PeopleMenuButton
+                          active={this.state.sidebarId === "people"}
+                          onClick={() => this.toggleSidebar("people")}
+                          presencecount={this.state.presenceCount}
+                        />
+						
+*/
