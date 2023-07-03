@@ -67,7 +67,14 @@ export function RoomEntryModal({
               </span>
             </Button>
           )}
-          {showOptions && breakpoint !== "sm" && (
+        </Column>
+      </Column>
+    </Modal>
+  );
+}
+
+//sdchange - removed below from line 70
+ /*         {showOptions && breakpoint !== "sm" && (
             <>
               <hr className={styleUtils.showLg} />
               <Button preset="transparent" className={styleUtils.showLg} onClick={onOptions}>
@@ -78,12 +85,7 @@ export function RoomEntryModal({
               </Button>
             </>
           )}
-        </Column>
-      </Column>
-    </Modal>
-  );
-}
-
+*/		  
 RoomEntryModal.propTypes = {
   className: PropTypes.string,
   roomName: PropTypes.string.isRequired,
